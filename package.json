@@ -1,32 +1,26 @@
 {
   "name": "myshop",
   "version": "1.0.0",
-  "description": "A shop for India",
+  "description": "My project to transform shopping experience",
   "main": "app.js",
-  "dependencies": {},
-  "devDependencies": {
-    "nodemon": "^1.18.3"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "start-server": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/M0706/ShopIt.git"
-  },
   "author": "Manav Garg",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/M0706/ShopIt/issues"
+  "devDependencies": {
+    "gh-pages": "^3.0.0",
+    "nodemon": "^1.18.3"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "pug": "^2.0.3"
-  },
-  "homepage": "https://github.com/M0706/ShopIt#readme"
+    "mysql2": "^2.1.0",
+    "pug": "^2.0.3",
+    "sequelize": "^5.21.13"
+  }
 }

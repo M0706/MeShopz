@@ -15,7 +15,6 @@ main {
   margin: auto;
 }
 
-
 form {
   display: inline;
 }
@@ -23,10 +22,12 @@ form {
 .centered {
   text-align: center;
 }
-.image{
- height: 20rem;
+
+.image {
+  height: 20rem;
 }
-.image img{
+
+.image img {
   height: 100%;
 }
 
@@ -201,6 +202,17 @@ form {
 .btn:hover,
 .btn:active {
   background-color: #00695c;
+  color: white;
+}
+
+.btn.danger {
+  color: red;
+  border-color: red;
+}
+
+.btn.danger:hover,
+.btn.danger:active {
+  background: red;
   color: white;
 }
 

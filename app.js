@@ -5,7 +5,8 @@ const bodyParser = require('body-parser');
 
 const errorController = require('./controllers/error');
 const mongoConnect = require('./util/database').mongoConnect;
-const User= require('./models/user');
+const User = require('./models/user');
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -20,10 +21,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
   User.findById('5ef4e5c99aed97ff9647b84f')
     .then(user => {
-      req.user = user;
+      //console.log("user")
+      req.user = new User(user.name, user.email, user.cart, user._id);
       next();
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log("Error occured while retrieving the user"));
 });
 
 app.use('/admin', adminRoutes);

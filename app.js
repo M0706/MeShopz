@@ -8,6 +8,7 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 const errorController = require('./controllers/error');
 const User = require('./models/user');
+const flash = require('connect-flash');
 
 const MONGODB_URI= 'mongodb+srv://Manav:jtHknBGHjakFB1Hu@cluster0-mgtvm.mongodb.net/shop'
 const app = express();
@@ -37,7 +38,7 @@ app.use(
 );
 
 app.use(csrfProtection);
-
+app.use(flash());
 app.use((req, res, next) => {
   if (!req.session.user) {
     return next();
